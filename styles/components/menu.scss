@@ -59,20 +59,16 @@
     padding: 1rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
+
     &:hover {
       background-color: $green-clr;
+      color: $white-clr;
     }
   }
 
   &__link {
     text-decoration: none;
     color: $dark-clr;
-    transition: all 0.3s ease-in-out;
-  }
-
-  // when hover on item, change the color of the link
-  &__item:hover &__link {
-    color: $white-clr;
   }
 
   &__close {
