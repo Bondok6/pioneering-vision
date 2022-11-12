@@ -2,8 +2,8 @@ const About = () => (
   <>
     <section className="section about">
       <h2 className="heading-2">طريقك نحو الريادة</h2>
-      <div className="about__img-box">
-        <img src="/imgs/video.png" alt="video" />
+      <div className="about__video-box">
+        <video src="video/Intro.mp4" autoPlay muted loop />
       </div>
       <p className="about__text">
         أن تكون جمعية رؤية الريادة عضوا قياديا في تطوير منظومة ريادة الاعمال
