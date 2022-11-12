@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import links from './navLinks';
 
 const Navbar = () => {
   return (
@@ -9,31 +10,13 @@ const Navbar = () => {
             <img src="/imgs/logo.png" alt="logo" className="logo" />
           </Link>
         </li>
-        <li className="nav__item">
-          <Link href="/" className="nav__link">
-            نبذة عنا
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link href="/program" className="nav__link">
-            برامجنا
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link href="/regulations-and-policies" className="nav__link">
-            اللوائح و السياسات
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link href="/volunteering" className="nav__link">
-            التطوع
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link href="/contact" className="nav__link">
-            تواصل معنا
-          </Link>
-        </li>
+        {links.map(({ href, label }) => (
+          <li className="nav__item">
+            <Link href={href} className="nav__link">
+              {label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

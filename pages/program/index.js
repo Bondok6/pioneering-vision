@@ -31,16 +31,14 @@ const programs = [
   },
 ];
 
-const Program = () => {
-  return (
-    <section className="section program">
-      <ul className="program__list">
-        {programs.map((program) => (
-          <ProgramCard key={program.id} {...program} />
-        ))}
-      </ul>
-    </section>
-  );
-};
+const Program = () => (
+  <section className="section program">
+    <ul className="program__list">
+      {programs.map((program) => (
+        <ProgramCard key={program.id} {...program} />
+      ))}
+    </ul>
+  </section>
+);
 
 export default Program;

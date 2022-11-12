@@ -17,7 +17,7 @@ const SocialLinks = () => {
       </li>
       <li className="social__item">
         <a
-          href="https://www.instagram.com/g20yeasaudi/?igshid=YmMyMTA2M2Y%3D"
+          href="https://www.instagram.com/evision_sa/"
           className="social__link"
           target="_blank"
         >
@@ -26,7 +26,7 @@ const SocialLinks = () => {
       </li>
       <li className="social__item">
         <a
-          href="https://twitter.com/G20YEAKSA"
+          href="https://twitter.com/evision_sa"
           className="social__link"
           target="_blank"
         >
