@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import links from './navLinks';
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -9,35 +10,11 @@ const Menu = () => {
       <nav className="navbar-menu">
         <ul className="navbar-menu__list" onClick={() => setOpen(false)}>
           <img src="/imgs/logo.png" alt="logo" className="logo" />
-
-          <li className="navbar-menu__item">
-            <Link href="/" className="navbar-menu__link">
-              نبذة عنا
+          {links.map(({ href, label }) => (
+            <Link href={href} className="navbar-menu__link">
+              <li className="navbar-menu__item">{label}</li>
             </Link>
-          </li>
-          <li className="navbar-menu__item">
-            <Link href="/program" className="navbar-menu__link">
-              برامجنا
-            </Link>
-          </li>
-          <li className="navbar-menu__item">
-            <Link
-              href="/regulations-and-policies"
-              className="navbar-menu__link"
-            >
-              اللوائح و السياسات
-            </Link>
-          </li>
-          <li className="navbar-menu__item">
-            <Link href="/volunteering" className="navbar-menu__link">
-              التطوع
-            </Link>
-          </li>
-          <li className="navbar-menu__item">
-            <Link href="/contact" className="navbar-menu__link">
-              تواصل معنا
-            </Link>
-          </li>
+          ))}
         </ul>
         <button onClick={() => setOpen(false)} className="navbar-menu__close">
           &times;
